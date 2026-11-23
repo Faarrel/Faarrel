@@ -1,108 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 210" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Faarrel. Graphic Designer, Character Animator, Discord Server Architect and Fullstack Developer.">
+  <style>
+    @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+    .in { animation: rise .8s cubic-bezier(.2,.7,.2,1) backwards; }
+
+    @keyframes slide { to { transform: translateX(-1020.6px); } }
+    .marq { animation: slide 36s linear infinite; }
+    @keyframes sweep {
+      0%   { transform: translateX(0);     opacity: 0; }
+      12%  { opacity: 1; }
+      70%  { opacity: 1; }
+      85%  { transform: translateX(928px); opacity: 0; }
+      100% { transform: translateX(928px); opacity: 0; }
+    }
+    .sweep { animation: sweep 7s ease-in-out 1.2s infinite; opacity: 0; }
+    @media (prefers-reduced-motion: reduce) {
+      .in, .card, .marq, .sweep, .scan { animation: none !important; }
+      .f { display: none; }
+    }
+
+  </style>
   <defs>
-    <!-- Background Canvas: #161618 to #121212 -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#161618"/>
-      <stop offset="100%" stop-color="#121212"/>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#FFFFFF" fill-opacity="0.07"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#121212" stop-opacity="1"/>
+      <stop offset="0.55" stop-color="#121212" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#121212" stop-opacity="0"/>
     </linearGradient>
-
-    <!-- Subtle White Ambient Glow (exact Hero.tsx bg-white/[0.04]) -->
-    <radialGradient id="soft-glow" cx="50%" cy="45%" r="55%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.07"/>
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.02"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Typography Gradient -->
-    <linearGradient id="text-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#D4D4D8"/>
+    <linearGradient id="sweepG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
-
-    <!-- Left & Right Smooth Edge Fade Masks for Marquee -->
-    <linearGradient id="edge-fade-left" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#121212" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#121212" stop-opacity="0"/>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#121212" stop-opacity="1"/>
+      <stop offset="0.06" stop-color="#121212" stop-opacity="0"/>
+      <stop offset="0.94" stop-color="#121212" stop-opacity="0"/>
+      <stop offset="1" stop-color="#121212" stop-opacity="1"/>
     </linearGradient>
-    <linearGradient id="edge-fade-right" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#121212" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#121212" stop-opacity="1"/>
-    </linearGradient>
-
-    <!-- Full-Width Marquee Clip Path -->
-    <clipPath id="marquee-window">
-      <rect x="25" y="166" width="800" height="34"/>
-    </clipPath>
-
-    <style>
-      /* Soft Ambient Breathing Glow */
-      @keyframes ambient-breathe {
-        0%, 100% { opacity: 0.12; transform: scale(1); }
-        50% { opacity: 0.28; transform: scale(1.08); }
-      }
-      .glow-layer {
-        transform-origin: 425px 95px;
-        animation: ambient-breathe 6s ease-in-out infinite;
-      }
-
-      /* Seamless Continuous Marquee Loop */
-      @keyframes marquee-scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-800px); }
-      }
-      .marquee-strip {
-        animation: marquee-scroll 24s linear infinite;
-        will-change: transform;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .glow-layer, .marquee-strip {
-          animation: none !important;
-        }
-      }
-    </style>
+    <clipPath id="tick"><rect x="56" y="254" width="1088" height="32"/></clipPath>
   </defs>
 
-  <!-- Base Card Frame -->
-  <rect width="848" height="208" x="1" y="1" rx="18" fill="url(#bg-grad)" stroke="#27272A" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="1199" height="299" rx="18" fill="#121212" stroke="#2A2A2E"/>
+  <rect x="1" y="1" width="1198" height="298" rx="17" fill="url(#dots)"/>
+  <rect x="1" y="1" width="1198" height="298" rx="17" fill="url(#fade)"/>
 
-  <!-- Soft Ambient Glow -->
-  <ellipse cx="425" cy="95" rx="360" ry="85" fill="url(#soft-glow)" class="glow-layer"/>
+  <text class="in" style="animation-delay:.05s" x="56" y="64" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" fill="#8E8E93">faarrel.my.id</text>
 
-  <!-- Intro Line from Hero.tsx -->
-  <text x="425" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="11" font-weight="600" fill="#A1A1AA" text-anchor="middle" letter-spacing="2">
-    HEY THERE, I'M
-  </text>
-
-  <!-- Hero Typography: FAARREL -->
-  <text x="425" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Montserrat, Inter, sans-serif" font-size="62" font-weight="900" fill="url(#text-grad)" text-anchor="middle" letter-spacing="4">
-    FAARREL
-  </text>
-
-  <!-- Subtitle from Hero.tsx -->
-  <text x="425" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="500" fill="#D4D4D8" text-anchor="middle" letter-spacing="0.3">
-    Graphic Designer  ·  Character Animator  ·  Discord Server Architect  ·  Fullstack Developer
-  </text>
-
-  <!-- Divider Line -->
-  <line x1="25" y1="165" x2="825" y2="165" stroke="#27272A" stroke-width="1"/>
-
-  <!-- Bottom Infinite Marquee (Mathematically 800px Seamless Loop) -->
-  <g clip-path="url(#marquee-window)">
-    <g class="marquee-strip">
-      <text x="0" y="188" font-family="'JetBrains Mono', 'SF Mono', Consolas, monospace" font-size="10.5" font-weight="600" fill="#E0E0E0" textLength="800" lengthAdjust="spacing">
-        GRAPHIC DESIGN   ✦   CHARACTER ANIMATION   ✦   DISCORD ARCHITECTURE   ✦   FULLSTACK DEVELOPMENT   ✦   
-      </text>
-      <text x="800" y="188" font-family="'JetBrains Mono', 'SF Mono', Consolas, monospace" font-size="10.5" font-weight="600" fill="#E0E0E0" textLength="800" lengthAdjust="spacing">
-        GRAPHIC DESIGN   ✦   CHARACTER ANIMATION   ✦   DISCORD ARCHITECTURE   ✦   FULLSTACK DEVELOPMENT   ✦   
-      </text>
-      <text x="1600" y="188" font-family="'JetBrains Mono', 'SF Mono', Consolas, monospace" font-size="10.5" font-weight="600" fill="#E0E0E0" textLength="800" lengthAdjust="spacing">
-        GRAPHIC DESIGN   ✦   CHARACTER ANIMATION   ✦   DISCORD ARCHITECTURE   ✦   FULLSTACK DEVELOPMENT   ✦   
-      </text>
-    </g>
+  <g class="in" style="animation-delay:.2s">
+    <rect x="866" y="40" width="278" height="36" rx="18" fill="#161618" stroke="#2A2A2E"/>
+    <circle cx="890" cy="58" r="4" fill="#4ADE80"/>
+    <circle cx="890" cy="58" r="4" fill="none" stroke="#4ADE80" stroke-width="1.5">
+      <animate attributeName="r" values="4;12" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.7;0" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="906" y="63" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12.5" fill="#8E8E93">open for global commissions</text>
   </g>
 
-  <!-- Edge Fade Overlays -->
-  <rect x="25" y="166" width="60" height="34" fill="url(#edge-fade-left)" pointer-events="none"/>
-  <rect x="765" y="166" width="60" height="34" fill="url(#edge-fade-right)" pointer-events="none"/>
+  <text class="in" style="animation-delay:.15s" x="52" y="168" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="104" font-weight="800" letter-spacing="-4" fill="#F2F2F2">FAARREL</text>
+  <text class="in" style="animation-delay:.4s" x="56" y="212" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="20" fill="#8E8E93">Graphic Designer, Character Animator, Discord Server Architect &amp; Fullstack Developer.</text>
+
+  <line x1="56" y1="246" x2="1144" y2="246" stroke="#2A2A2E"/>
+  <rect class="sweep" x="56" y="245.25" width="160" height="1.5" fill="url(#sweepG)"/>
+
+  <g clip-path="url(#tick)"><g class="marq"><g><text x="0.0" y="276" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" letter-spacing="2" fill="#6B6B70">GRAPHIC DESIGN</text><path d="M175 267 Q175 272 180 272 Q175 272 175 277 Q175 272 170 272 Q175 272 175 267Z" fill="#6B6B70"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="0.0s" repeatCount="indefinite"/></path><text x="210.6" y="276" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" letter-spacing="2" fill="#6B6B70">CHARACTER ANIMATION</text><path d="M435 267 Q435 272 440 272 Q435 272 435 277 Q435 272 430 272 Q435 272 435 267Z" fill="#6B6B70"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="0.9s" repeatCount="indefinite"/></path><text x="470.7" y="276" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" letter-spacing="2" fill="#6B6B70">DISCORD ARCHITECTURE</text><path d="M705 267 Q705 272 710 272 Q705 272 705 277 Q705 272 700 272 Q705 272 705 267Z" fill="#6B6B70"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="1.8s" repeatCount="indefinite"/></path><text x="740.7" y="276" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" letter-spacing="2" fill="#6B6B70">FULLSTACK DEVELOPMENT</text><path d="M985 267 Q985 272 990 272 Q985 272 985 277 Q985 272 980 272 Q985 272 985 267Z" fill="#6B6B70"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="2.7s" repeatCount="indefinite"/></path></g><g transform="translate(1020.6 0)"><text x="0.0" y="276" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" letter-spacing="2" fill="#6B6B70">GRAPHIC DESIGN</text><path d="M175 267 Q175 272 180 272 Q175 272 175 277 Q175 272 170 272 Q175 272 175 267Z" fill="#6B6B70"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="0.0s" repeatCount="indefinite"/></path><text x="210.6" y="276" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" letter-spacing="2" fill="#6B6B70">CHARACTER ANIMATION</text><path d="M435 267 Q435 272 440 272 Q435 272 435 277 Q435 272 430 272 Q435 272 435 267Z" fill="#6B6B70"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="0.9s" repeatCount="indefinite"/></path><text x="470.7" y="276" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" letter-spacing="2" fill="#6B6B70">DISCORD ARCHITECTURE</text><path d="M705 267 Q705 272 710 272 Q705 272 705 277 Q705 272 700 272 Q705 272 705 267Z" fill="#6B6B70"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="1.8s" repeatCount="indefinite"/></path><text x="740.7" y="276" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" letter-spacing="2" fill="#6B6B70">FULLSTACK DEVELOPMENT</text><path d="M985 267 Q985 272 990 272 Q985 272 985 277 Q985 272 980 272 Q985 272 985 267Z" fill="#6B6B70"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="2.7s" repeatCount="indefinite"/></path></g><g transform="translate(2041.2 0)"><text x="0.0" y="276" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" letter-spacing="2" fill="#6B6B70">GRAPHIC DESIGN</text><path d="M175 267 Q175 272 180 272 Q175 272 175 277 Q175 272 170 272 Q175 272 175 267Z" fill="#6B6B70"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="0.0s" repeatCount="indefinite"/></path><text x="210.6" y="276" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" letter-spacing="2" fill="#6B6B70">CHARACTER ANIMATION</text><path d="M435 267 Q435 272 440 272 Q435 272 435 277 Q435 272 430 272 Q435 272 435 267Z" fill="#6B6B70"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="0.9s" repeatCount="indefinite"/></path><text x="470.7" y="276" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" letter-spacing="2" fill="#6B6B70">DISCORD ARCHITECTURE</text><path d="M705 267 Q705 272 710 272 Q705 272 705 277 Q705 272 700 272 Q705 272 705 267Z" fill="#6B6B70"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="1.8s" repeatCount="indefinite"/></path><text x="740.7" y="276" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" letter-spacing="2" fill="#6B6B70">FULLSTACK DEVELOPMENT</text><path d="M985 267 Q985 272 990 272 Q985 272 985 277 Q985 272 980 272 Q985 272 985 267Z" fill="#6B6B70"><animate attributeName="opacity" values="0.35;1;0.35" dur="3.6s" begin="2.7s" repeatCount="indefinite"/></path></g></g></g>
+  <rect x="56" y="254" width="1088" height="32" fill="url(#edge)"/>
 </svg>
