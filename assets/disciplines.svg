@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 120" width="100%" height="auto">
+  <defs>
+    <style>
+      /* Wave Pulse for Motion Design */
+      @keyframes wave-pulse {
+        0%, 100% { stroke-dashoffset: 0; }
+        50% { stroke-dashoffset: 24; }
+      }
+      .anim-wave {
+        stroke-dasharray: 6 3;
+        animation: wave-pulse 3s linear infinite;
+      }
+
+      /* Pivot Rotation for Puppet Rigging */
+      @keyframes joint-sway {
+        0%, 100% { transform: rotate(-8deg); }
+        50% { transform: rotate(8deg); }
+      }
+      .anim-joint {
+        transform-origin: 319px 40px;
+        animation: joint-sway 2.4s ease-in-out infinite;
+      }
+
+      /* Node Pulse for Discord Infrastructure */
+      @keyframes node-blink {
+        0%, 100% { opacity: 0.3; r: 3px; }
+        50% { opacity: 1; r: 4.5px; }
+      }
+      .anim-node {
+        animation: node-blink 1.8s ease-in-out infinite;
+      }
+
+      /* Cursor Blink for Web Engineering */
+      @keyframes cursor-blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      .anim-cursor {
+        animation: cursor-blink 1s infinite;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .anim-wave, .anim-joint, .anim-node, .anim-cursor {
+          animation: none !important;
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Card 1: Motion Design -->
+  <g transform="translate(5, 5)">
+    <rect width="200" height="110" rx="12" fill="#161618" stroke="#27272A" stroke-width="1"/>
+    <!-- Animated Sine/Pulse Wave (Monochrome White) -->
+    <path d="M 24 40 Q 36 28 48 40 T 72 40" fill="none" stroke="#FFFFFF" stroke-width="2" class="anim-wave"/>
+    <text x="24" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Motion Design</text>
+    <text x="24" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="10.5" font-weight="500" fill="#A1A1AA">60 FPS Loops · Avatars</text>
+  </g>
+
+  <!-- Card 2: 2D Puppet Rigging -->
+  <g transform="translate(217, 5)">
+    <rect width="200" height="110" rx="12" fill="#161618" stroke="#27272A" stroke-width="1"/>
+    <!-- Animated Joint Arm (Monochrome White & Zinc) -->
+    <g class="anim-joint">
+      <circle cx="102" cy="38" r="4" fill="#FFFFFF"/>
+      <line x1="102" y1="38" x2="118" y2="46" stroke="#A1A1AA" stroke-width="2"/>
+      <circle cx="118" cy="46" r="3" fill="#FFFFFF"/>
+    </g>
+    <text x="24" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Puppet Rigging</text>
+    <text x="24" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="10.5" font-weight="500" fill="#A1A1AA">Mesh Deformation · PSD</text>
+  </g>
+
+  <!-- Card 3: Discord Systems -->
+  <g transform="translate(429, 5)">
+    <rect width="200" height="110" rx="12" fill="#161618" stroke="#27272A" stroke-width="1"/>
+    <!-- Animated Network Branch (Monochrome White & Zinc) -->
+    <line x1="30" y1="38" x2="52" y2="38" stroke="#27272A" stroke-width="2"/>
+    <circle cx="30" cy="38" r="3.5" fill="#71717A"/>
+    <circle cx="52" cy="38" r="4" fill="#FFFFFF" class="anim-node"/>
+    <text x="24" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Discord Systems</text>
+    <text x="24" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="10.5" font-weight="500" fill="#A1A1AA">Bots · 45,000 Members</text>
+  </g>
+
+  <!-- Card 4: Web Engineering -->
+  <g transform="translate(641, 5)">
+    <rect width="200" height="110" rx="12" fill="#161618" stroke="#27272A" stroke-width="1"/>
+    <!-- Code prompt with blinking cursor (Monochrome) -->
+    <text x="24" y="42" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#FFFFFF">&lt;/&gt;</text>
+    <rect x="58" y="32" width="6" height="12" fill="#A1A1AA" class="anim-cursor"/>
+    <text x="24" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Web Engineering</text>
+    <text x="24" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="10.5" font-weight="500" fill="#A1A1AA">Next.js 16 · 100% Score</text>
+  </g>
+</svg>
