@@ -1,32 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
-  <defs>
-    <linearGradient id="sweepG3" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
-    </linearGradient>
-    <clipPath id="clip3"><rect x="0.5" y="0.5" width="39" height="39" rx="10"/></clipPath>
-    <style>
-      @keyframes rise3 { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-      .card3 { animation: rise3 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s backwards; }
-      @keyframes sweep3 {
-        0% { transform: translateX(-30px); opacity: 0; }
-        20% { opacity: 1; }
-        80% { opacity: 1; }
-        100% { transform: translateX(50px); opacity: 0; }
-      }
-      .sweep3 { animation: sweep3 4.5s ease-in-out 2.0s infinite; opacity: 0; }
-      @keyframes pulse3 { 0%, 100% { opacity: 0.88; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
-      .icon3 { transform-origin: 20px 20px; animation: pulse3 3.6s ease-in-out 0.6s infinite; }
-      @media (prefers-reduced-motion: reduce) { .card3, .sweep3, .icon3 { animation: none !important; } }
-    </style>
-  </defs>
-  <rect class="card3" x="0.5" y="0.5" width="39" height="39" rx="10" fill="#161618" stroke="#2A2A2E"/>
-  <g clip-path="url(#clip3)"><rect class="sweep3" x="0" y="0" width="22" height="1.5" fill="url(#sweepG3)"/></g>
-  <g class="icon3">
-    <svg x="10" y="10" width="20" height="20" viewBox="-2.5 -2 24 24" fill="#FFFFFF">
-      <path d="M16.25 16.25v-10h-10v-.625c0-1.034.841-1.875 1.875-1.875H10V0H8.125A5.632 5.632 0 0 0 2.5 5.625v.625H0V10h2.5v6.25H0V20h8.75v-3.75h-2.5V10h6.285v6.25H10V20h8.75v-3.75h-2.5z"/>
-      <circle cx="14.375" cy="1.875" r="1.875"/>
-    </svg>
-  </g>
+  <rect x="0.5" y="0.5" width="39" height="39" rx="10" fill="#161618" stroke="#2A2A2E"/>
+  <svg x="10" y="10" width="20" height="20" viewBox="-2.5 -2 24 24" fill="#FFFFFF">
+    <path d="M16.25 16.25v-10h-10v-.625c0-1.034.841-1.875 1.875-1.875H10V0H8.125A5.632 5.632 0 0 0 2.5 5.625v.625H0V10h2.5v6.25H0V20h8.75v-3.75h-2.5V10h6.285v6.25H10V20h8.75v-3.75h-2.5z"/>
+    <circle cx="14.375" cy="1.875" r="1.875"/>
+  </svg>
 </svg>
