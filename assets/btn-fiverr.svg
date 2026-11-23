@@ -1,9 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="104" height="36" viewBox="0 0 104 36">
-  <rect x="0.5" y="0.5" width="103" height="35" rx="8" fill="#161618" stroke="#2A2A2E"/>
-  <!-- Fiverr Icon provided by user -->
-  <svg x="13" y="10" width="16" height="16" viewBox="-2.5 -2 24 24" fill="#FFFFFF">
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <rect x="0.5" y="0.5" width="39" height="39" rx="10" fill="#161618" stroke="#2A2A2E"/>
+  <svg x="10" y="10" width="20" height="20" viewBox="-2.5 -2 24 24" fill="#FFFFFF">
     <path d="M16.25 16.25v-10h-10v-.625c0-1.034.841-1.875 1.875-1.875H10V0H8.125A5.632 5.632 0 0 0 2.5 5.625v.625H0V10h2.5v6.25H0V20h8.75v-3.75h-2.5V10h6.285v6.25H10V20h8.75v-3.75h-2.5z"/>
     <circle cx="14.375" cy="1.875" r="1.875"/>
   </svg>
-  <text x="37" y="22.5" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12.5" font-weight="600" fill="#F2F2F2">Fiverr</text>
 </svg>
