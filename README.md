@@ -4,13 +4,6 @@
 
   <br/><br/>
 
-  <p align="center">
-    <strong>Creative Technologist &amp; Character Rigger</strong><br/>
-    Specializing in 2D puppet animation, high-scale Discord server architecture, and high-performance web engineering.
-  </p>
-
-  <br/>
-
   <p><strong>Discord Activity</strong></p>
   <a href="https://discord.com/users/938045579215380510">
     <img src="https://lanyard.cnrad.dev/api/938045579215380510?theme=dark&bg=161618&borderColor=2A2A2E&borderRadius=16px&animated=true&showDisplayName=true&hideDiscrim=true" alt="Faarrel Discord Presence" width="400" />

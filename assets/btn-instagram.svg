@@ -1,6 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
-  <rect x="0.5" y="0.5" width="39" height="39" rx="10" fill="#161618" stroke="#2A2A2E"/>
-  <g transform="translate(10, 10)" stroke="#FFFFFF" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <linearGradient id="sweepG4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip4"><rect x="0.5" y="0.5" width="39" height="39" rx="10"/></clipPath>
+    <style>
+      @keyframes rise4 { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+      .card4 { animation: rise4 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s backwards; }
+      @keyframes sweep4 {
+        0% { transform: translateX(-30px); opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { transform: translateX(50px); opacity: 0; }
+      }
+      .sweep4 { animation: sweep4 4.5s ease-in-out 2.9s infinite; opacity: 0; }
+      @keyframes pulse4 { 0%, 100% { opacity: 0.88; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
+      .icon4 { transform-origin: 20px 20px; animation: pulse4 3.6s ease-in-out 0.9s infinite; }
+      @media (prefers-reduced-motion: reduce) { .card4, .sweep4, .icon4 { animation: none !important; } }
+    </style>
+  </defs>
+  <rect class="card4" x="0.5" y="0.5" width="39" height="39" rx="10" fill="#161618" stroke="#2A2A2E"/>
+  <g clip-path="url(#clip4)"><rect class="sweep4" x="0" y="0" width="22" height="1.5" fill="url(#sweepG4)"/></g>
+  <g class="icon4" transform="translate(10, 10)" stroke="#FFFFFF" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <rect x="1.5" y="1.5" width="17" height="17" rx="5"/>
     <circle cx="10" cy="10" r="4"/>
     <circle cx="14.5" cy="5.5" r="0.8" fill="#FFFFFF"/>
