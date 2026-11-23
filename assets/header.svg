@@ -48,16 +48,6 @@
 
   <text class="in" style="animation-delay:.05s" x="56" y="64" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" fill="#8E8E93">faarrel.my.id</text>
 
-  <g class="in" style="animation-delay:.2s">
-    <rect x="866" y="40" width="278" height="36" rx="18" fill="#161618" stroke="#2A2A2E"/>
-    <circle cx="890" cy="58" r="4" fill="#4ADE80"/>
-    <circle cx="890" cy="58" r="4" fill="none" stroke="#4ADE80" stroke-width="1.5">
-      <animate attributeName="r" values="4;12" dur="2.4s" repeatCount="indefinite"/>
-      <animate attributeName="stroke-opacity" values="0.7;0" dur="2.4s" repeatCount="indefinite"/>
-    </circle>
-    <text x="906" y="63" font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12.5" fill="#8E8E93">open for global commissions</text>
-  </g>
-
   <text class="in" style="animation-delay:.15s" x="52" y="168" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="104" font-weight="800" letter-spacing="-4" fill="#F2F2F2">FAARREL</text>
   <text class="in" style="animation-delay:.4s" x="56" y="212" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="20" fill="#8E8E93">Graphic Designer, Character Animator, Discord Server Architect &amp; Fullstack Developer.</text>
 
