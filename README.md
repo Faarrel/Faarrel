@@ -23,7 +23,7 @@
 
   <p><strong>Discord Activity</strong></p>
   <a href="https://discord.com/users/938045579215380510">
-    <img src="https://lanyard.cnrad.dev/api/938045579215380510?theme=dark&bg=161618&borderRadius=14px&animated=true" alt="Faarrel Discord Presence" width="400" />
+    <img src="https://lanyard.cnrad.dev/api/938045579215380510?theme=dark&bg=161618&borderRadius=14px&animated=true&showDisplayName=true&hideDiscrim=true" alt="Faarrel Discord Presence" width="400" />
   </a>
 
 </div>
