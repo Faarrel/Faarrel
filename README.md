@@ -6,25 +6,30 @@
 
   <p align="center">
     <strong>Creative Technologist &amp; Character Rigger</strong><br/>
-    2D puppet animation, Discord community systems, and frontend web engineering.
+    Specializing in 2D puppet animation, high-scale Discord server architecture, and high-performance web engineering.
   </p>
 
   <p align="center">
-    <a href="https://faarrel.my.id/"><strong>Website</strong></a>
+    <a href="https://faarrel.my.id/"><b>faarrel.my.id</b></a>
     &nbsp;&nbsp;·&nbsp;&nbsp;
-    <a href="https://discord.com/users/938045579215380510"><strong>Discord (@faarrel)</strong></a>
+    <a href="https://discord.com/users/938045579215380510"><b>Discord</b></a>
     &nbsp;&nbsp;·&nbsp;&nbsp;
-    <a href="https://www.fiverr.com/faarrel"><strong>Fiverr (5.0★)</strong></a>
+    <a href="https://www.fiverr.com/faarrel"><b>Fiverr (5.0★)</b></a>
     &nbsp;&nbsp;·&nbsp;&nbsp;
-    <a href="https://www.instagram.com/fxrrel_/"><strong>Instagram</strong></a>
+    <a href="https://www.instagram.com/fxrrel_/"><b>Instagram</b></a>
     &nbsp;&nbsp;·&nbsp;&nbsp;
-    <a href="mailto:muhammadfarrelyf@gmail.com"><strong>Email</strong></a>
+    <a href="mailto:muhammadfarrelyf@gmail.com"><b>Email</b></a>
   </p>
 
   <br/>
 
+  <img src="./assets/Stats.svg" alt="Key Stats" width="100%" />
+
+  <br/><br/>
+
+  <p><strong>Discord Activity</strong></p>
   <a href="https://discord.com/users/938045579215380510">
-    <img src="https://lanyard.cnrad.dev/api/938045579215380510?theme=dark&bg=161618&borderRadius=14px&animated=true" alt="Faarrel Discord Presence" width="380" />
+    <img src="https://lanyard.cnrad.dev/api/938045579215380510?theme=dark&bg=161618&borderRadius=14px&animated=true" alt="Faarrel Discord Presence" width="400" />
   </a>
 
 </div>
@@ -41,30 +46,35 @@
 
 <br/>
 
----
+#### 1. 2D Character Animation &amp; Puppet Motion
+- Transforming static anime artwork into loop cycles with After Effects puppet pins and mesh deformation.
+- Multi-layer PSD separation across hair, eyes, facial expressions, and clothing physics.
+- Custom Discord Nitro avatars, banners, and server assets exported at 60 FPS within platform file limits.
 
-### Verified Track Record
+#### 2. Discord Systems &amp; Server Infrastructure
+- Turnkey Discord guild architecture managing communities of 45,000 members.
+- Custom bots built with `discord.js` and Python with fast event dispatch.
+- Three-tier verification onboarding, anti-raid gates, and support ticket pipelines.
 
-- **Motion Design & 2D Rigging:** 300+ completed client orders on Fiverr with a 5.0 rating across 136 reviews. Specializing in 60 FPS loop cycles, multi-layer PSD separation, and puppet mesh deformation.
-- **Discord Community Infrastructure:** Turnkey server architecture managing communities of 45,000 members with 0 raid breaches. Custom event-driven bots written in `discord.js` and Python.
-- **Frontend Web Engineering:** Modern web applications built with Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS v4, achieving a 100% Lighthouse performance score.
-
----
-
-### Tools & Technologies
-
-| Discipline | Stack & Tools |
-|---|---|
-| **Animation & Motion** | Adobe After Effects · Adobe Photoshop · Alight Motion · 60 FPS Loop Cycles |
-| **Frontend Development** | Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · Framer Motion |
-| **Discord & Backend** | Discord.js · Discord API · Python · Node.js · Security & Verification Systems |
+#### 3. Frontend Web Engineering
+- Responsive web applications built with Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS v4.
+- High-contrast typography and layout engineered to strict WCAG AA contrast standards.
+- Kinetic interaction using GSAP, Framer Motion, and Lenis smooth scrolling.
 
 ---
 
-### Contact & Collaboration
+### Tech Stack &amp; Tools
+
+- **Creative &amp; Motion**: Adobe After Effects · Adobe Photoshop · Alight Motion · 60 FPS APNG / GIF
+- **Web &amp; Frontend**: Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · Framer Motion · GSAP
+- **Discord &amp; Backend**: discord.js · Python · Node.js · Redis Cache · Webhook Pipelines
+
+---
+
+### Contact &amp; Profiles
 
 - **Website**: [faarrel.my.id](https://faarrel.my.id/)
 - **Discord**: [@faarrel](https://discord.com/users/938045579215380510) (ID: `938045579215380510`)
-- **Fiverr**: [faarrel](https://www.fiverr.com/faarrel) (5.0★ Rating)
+- **Fiverr**: [faarrel](https://www.fiverr.com/faarrel)
 - **Instagram**: [@fxrrel_](https://www.instagram.com/fxrrel_/)
 - **Email**: [muhammadfarrelyf@gmail.com](mailto:muhammadfarrelyf@gmail.com)

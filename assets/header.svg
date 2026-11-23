@@ -1,119 +1,108 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 210" width="100%" height="auto">
   <defs>
-    <!-- Background Canvas Gradient from Portfolio: #161618 to #121212 -->
+    <!-- Background Canvas: #161618 to #121212 -->
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#161618"/>
       <stop offset="100%" stop-color="#121212"/>
     </linearGradient>
 
-    <!-- Pure Monochrome Soft Lighting Glow (exact matching Hero.tsx: bg-white/[0.04]) -->
-    <radialGradient id="mono-glow" cx="50%" cy="45%" r="50%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+    <!-- Subtle White Ambient Glow (exact Hero.tsx bg-white/[0.04]) -->
+    <radialGradient id="soft-glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.07"/>
       <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.02"/>
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- High-Contrast Monochrome Typography Gradient (#FFFFFF to #D4D4D8) -->
-    <linearGradient id="title-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <!-- Typography Gradient -->
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#D4D4D8"/>
     </linearGradient>
 
-    <!-- Left & Right Edge Fades for Seamless Marquee -->
-    <linearGradient id="fade-left" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Left & Right Smooth Edge Fade Masks for Marquee -->
+    <linearGradient id="edge-fade-left" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#121212" stop-opacity="1"/>
       <stop offset="100%" stop-color="#121212" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="fade-right" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="edge-fade-right" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#121212" stop-opacity="0"/>
       <stop offset="100%" stop-color="#121212" stop-opacity="1"/>
     </linearGradient>
 
-    <!-- Marquee Clip Path across the full ticker bar width -->
-    <clipPath id="marquee-clip">
-      <rect x="40" y="162" width="770" height="36"/>
+    <!-- Full-Width Marquee Clip Path -->
+    <clipPath id="marquee-window">
+      <rect x="25" y="166" width="800" height="34"/>
     </clipPath>
 
     <style>
-      /* Monochrome Ambient Breathing Glow */
-      @keyframes breathe-glow {
-        0%, 100% {
-          opacity: 0.10;
-          transform: scale(1);
-        }
-        50% {
-          opacity: 0.22;
-          transform: scale(1.08);
-        }
+      /* Soft Ambient Breathing Glow */
+      @keyframes ambient-breathe {
+        0%, 100% { opacity: 0.12; transform: scale(1); }
+        50% { opacity: 0.28; transform: scale(1.08); }
       }
       .glow-layer {
         transform-origin: 425px 95px;
-        animation: breathe-glow 5s ease-in-out infinite;
+        animation: ambient-breathe 6s ease-in-out infinite;
       }
 
-      /* Infinite Seamless Marquee Animation with Exact textLength Lock */
+      /* Seamless Continuous Marquee Loop */
       @keyframes marquee-scroll {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-640px);
-        }
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-800px); }
       }
-      .marquee-track {
-        animation: marquee-scroll 16s linear infinite;
+      .marquee-strip {
+        animation: marquee-scroll 24s linear infinite;
         will-change: transform;
       }
 
-      /* Reduced Motion Safety */
       @media (prefers-reduced-motion: reduce) {
-        .glow-layer, .marquee-track {
+        .glow-layer, .marquee-strip {
           animation: none !important;
         }
       }
     </style>
   </defs>
 
-  <!-- Card Surface with 1px border (#27272A) -->
+  <!-- Base Card Frame -->
   <rect width="848" height="208" x="1" y="1" rx="18" fill="url(#bg-grad)" stroke="#27272A" stroke-width="1"/>
 
-  <!-- Animated Pure White Ambient Glow -->
-  <ellipse cx="425" cy="95" rx="360" ry="85" fill="url(#mono-glow)" class="glow-layer"/>
+  <!-- Soft Ambient Glow -->
+  <ellipse cx="425" cy="95" rx="360" ry="85" fill="url(#soft-glow)" class="glow-layer"/>
 
-  <!-- Top Intro Greeting (#A1A1AA) -->
-  <text x="425" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="11.5" font-weight="600" fill="#A1A1AA" text-anchor="middle" letter-spacing="2">
+  <!-- Intro Line from Hero.tsx -->
+  <text x="425" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="11" font-weight="600" fill="#A1A1AA" text-anchor="middle" letter-spacing="2">
     HEY THERE, I'M
   </text>
 
-  <!-- Wordmark: FAARREL (Monochrome Hero Typography) -->
-  <text x="425" y="104" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Montserrat, Inter, sans-serif" font-size="62" font-weight="900" fill="url(#title-grad)" text-anchor="middle" letter-spacing="4">
+  <!-- Hero Typography: FAARREL -->
+  <text x="425" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Montserrat, Inter, sans-serif" font-size="62" font-weight="900" fill="url(#text-grad)" text-anchor="middle" letter-spacing="4">
     FAARREL
   </text>
 
-  <!-- Role Subtitle (#D4D4D8) -->
-  <text x="425" y="134" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="12.5" font-weight="500" fill="#D4D4D8" text-anchor="middle" letter-spacing="0.5">
+  <!-- Subtitle from Hero.tsx -->
+  <text x="425" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" font-size="13" font-weight="500" fill="#D4D4D8" text-anchor="middle" letter-spacing="0.3">
     Graphic Designer  ·  Character Animator  ·  Discord Server Architect  ·  Fullstack Developer
   </text>
 
-  <!-- Subtle Divider Line (#27272A) -->
-  <line x1="50" y1="156" x2="800" y2="156" stroke="#27272A" stroke-width="1"/>
+  <!-- Divider Line -->
+  <line x1="25" y1="165" x2="825" y2="165" stroke="#27272A" stroke-width="1"/>
 
-  <!-- Bottom Animated Marquee Ticker Bar (Guaranteed Zero-Gap Loop) -->
-  <g clip-path="url(#marquee-clip)">
-    <g class="marquee-track">
-      <text x="40" y="184" font-family="'JetBrains Mono', 'SF Mono', Consolas, monospace" font-size="10.5" font-weight="600" fill="#F4F4F5" textLength="640" lengthAdjust="spacing">
-        GRAPHIC DESIGN  ✦  2D PUPPET RIGGING  ✦  DISCORD INFRASTRUCTURE  ✦  NEXT.JS &amp; REACT  ✦  
+  <!-- Bottom Infinite Marquee (Mathematically 800px Seamless Loop) -->
+  <g clip-path="url(#marquee-window)">
+    <g class="marquee-strip">
+      <text x="0" y="188" font-family="'JetBrains Mono', 'SF Mono', Consolas, monospace" font-size="10.5" font-weight="600" fill="#E0E0E0" textLength="800" lengthAdjust="spacing">
+        GRAPHIC DESIGN   ✦   CHARACTER ANIMATION   ✦   DISCORD ARCHITECTURE   ✦   FULLSTACK DEVELOPMENT   ✦   
       </text>
-      <text x="680" y="184" font-family="'JetBrains Mono', 'SF Mono', Consolas, monospace" font-size="10.5" font-weight="600" fill="#F4F4F5" textLength="640" lengthAdjust="spacing">
-        GRAPHIC DESIGN  ✦  2D PUPPET RIGGING  ✦  DISCORD INFRASTRUCTURE  ✦  NEXT.JS &amp; REACT  ✦  
+      <text x="800" y="188" font-family="'JetBrains Mono', 'SF Mono', Consolas, monospace" font-size="10.5" font-weight="600" fill="#E0E0E0" textLength="800" lengthAdjust="spacing">
+        GRAPHIC DESIGN   ✦   CHARACTER ANIMATION   ✦   DISCORD ARCHITECTURE   ✦   FULLSTACK DEVELOPMENT   ✦   
       </text>
-      <text x="1320" y="184" font-family="'JetBrains Mono', 'SF Mono', Consolas, monospace" font-size="10.5" font-weight="600" fill="#F4F4F5" textLength="640" lengthAdjust="spacing">
-        GRAPHIC DESIGN  ✦  2D PUPPET RIGGING  ✦  DISCORD INFRASTRUCTURE  ✦  NEXT.JS &amp; REACT  ✦  
+      <text x="1600" y="188" font-family="'JetBrains Mono', 'SF Mono', Consolas, monospace" font-size="10.5" font-weight="600" fill="#E0E0E0" textLength="800" lengthAdjust="spacing">
+        GRAPHIC DESIGN   ✦   CHARACTER ANIMATION   ✦   DISCORD ARCHITECTURE   ✦   FULLSTACK DEVELOPMENT   ✦   
       </text>
     </g>
   </g>
 
-  <!-- Left & Right Fade Masks for Smooth Edge Softening -->
-  <rect x="35" y="158" width="55" height="42" fill="url(#fade-left)" pointer-events="none"/>
-  <rect x="760" y="158" width="55" height="42" fill="url(#fade-right)" pointer-events="none"/>
+  <!-- Edge Fade Overlays -->
+  <rect x="25" y="166" width="60" height="34" fill="url(#edge-fade-left)" pointer-events="none"/>
+  <rect x="765" y="166" width="60" height="34" fill="url(#edge-fade-right)" pointer-events="none"/>
 </svg>
